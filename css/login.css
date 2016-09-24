@@ -14,13 +14,13 @@ body {
     box-sizing: border-box;
     color: rgb(38, 38, 38);
     display: flex;
-    height: 500px;
+    height: 600px;
     left: 0px;
     min-height: auto;
     min-width: auto;
     position: relative;
     right: 0px;
-    top: 200px;
+    top: 100px;
     width: 350px;
     /*column-rule-color: rgb(38, 38, 38);*/
     perspective-origin: 175px 261.5px;
@@ -59,7 +59,7 @@ body {
     overflow: hidden;
 }/*#H1_2*/
 
-#DIV_3 {
+#SPLIT_1{
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(38, 38, 38);
@@ -83,7 +83,7 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#DIV_3*/
 
-#FORM_4 {
+#FORM_1 {
     color: rgb(38, 38, 38);
     display: flex;
     height: 400px;
@@ -100,23 +100,8 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#FORM_4*/
 
-#H2_5 {
-    color: rgb(153, 153, 153);
-    height: 40px;
-    min-height: auto;
-    min-width: auto;
-    text-align: center;
-    width: 268px;
-    column-rule-color: rgb(153, 153, 153);
-    perspective-origin: 134px 20px;
-    transform-origin: 134px 20px;
-    border: 0px none rgb(153, 153, 153);
-    font: normal normal 600 normal 17px / 20px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin: 0px 40px 10px;
-    outline: rgb(153, 153, 153) none 0px;
-}/*#H2_5*/
 
-#SPAN_6, #SPAN_22 {
+#SPAN_1 {
     bottom: 0px;
     color: rgb(38, 38, 38);
     display: block;
@@ -137,7 +122,7 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#SPAN_6, #SPAN_22*/
 
-#BUTTON_23 {
+#BUTTON {
     color: rgb(255, 255, 255);
     cursor: pointer;
     height: 31px;
@@ -148,8 +133,8 @@ body {
     column-rule-color: rgb(255, 255, 255);
     perspective-origin: 134px 15.5px;
     transform-origin: 134px 15.5px;
-    background: rgb(56, 151, 240) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 1px solid rgb(56, 151, 240);
+    background: rgba(11, 61, 146,0.8) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(11, 61, 146);
     border-radius: 3px 3px 3px 3px;
     font: normal normal 600 normal 14px / 29px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
     outline: rgb(255, 255, 255) none 0px;
@@ -157,7 +142,7 @@ body {
     padding: 0px 11px;
 }/*#BUTTON_7, #BUTTON_23*/
 
-#BUTTON_7:after, #BUTTON_23:after {
+#BUTTON:after {
     color: rgb(255, 255, 255);
     content: '"."';
     cursor: pointer;
@@ -175,32 +160,8 @@ body {
     outline: rgb(255, 255, 255) none 0px;
 }/*#BUTTON_7:after, #BUTTON_23:after*/
 
-#SPAN_8 {
-    background-position: -172px -292px;
-    bottom: -3px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: inline-block;
-    height: 16px;
-    left: 0px;
-    position: relative;
-    right: 0px;
-    text-align: center;
-    top: 3px;
-    white-space: nowrap;
-    width: 16px;
-    column-rule-color: rgb(255, 255, 255);
-    align-self: flex-start;
-    perspective-origin: 8px 8px;
-    transform-origin: 8px 8px;
-    background: rgba(0, 0, 0, 0) url("https://instagramstatic-a.akamaihd.net/h1/sprites/core/87d7c0.png") no-repeat scroll -172px -292px / 358px 350px padding-box border-box;
-    border: 0px none rgb(255, 255, 255);
-    font: normal normal 600 normal 14px / 29px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin: 0px 8px 0px 0px;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#SPAN_8*/
 
-#DIV_9 {
+#SPLIT_2, #SPLIT_5 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(38, 38, 38);
@@ -223,7 +184,7 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#DIV_9*/
 
-#DIV_10, #DIV_12 {
+#DIV_10{
     bottom: -7.2px;
     box-sizing: border-box;
     color: rgb(38, 38, 38);
@@ -247,32 +208,8 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#DIV_10, #DIV_12*/
 
-#DIV_11 {
-    bottom: 0px;
-    box-sizing: border-box;
-    color: rgb(153, 153, 153);
-    display: flex;
-    height: 15px;
-    left: 0px;
-    min-height: auto;
-    min-width: auto;
-    position: relative;
-    right: 0px;
-    text-transform: uppercase;
-    top: 0px;
-    width: 18.1094px;
-    column-rule-color: rgb(153, 153, 153);
-    perspective-origin: 9.04688px 7.5px;
-    transform-origin: 9.04688px 7.5px;
-    border: 0px solid rgb(0, 0, 0);
-    flex: 0 0 auto;
-    flex-flow: column nowrap;
-    font: normal normal 600 normal 13px / 15px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin: 0px 18px;
-    outline: rgb(153, 153, 153) none 0px;
-}/*#DIV_11*/
 
-#DIV_13, #DIV_15, #DIV_17, #DIV_19 {
+#DIV_13, #DIV_19 {
     bottom: 0px;
     box-sizing: border-box;
     color: rgb(255, 255, 255);
@@ -357,7 +294,7 @@ body {
     outline: rgb(38, 38, 38) none 0px;
 }/*#DIV_21*/
 
-#P_24 {
+#text {
     color: rgb(255,255,255);
     height: 37px;
     min-height: auto;
@@ -370,6 +307,7 @@ body {
     border: 0px none rgb(153, 153, 153);
     font: normal normal normal normal 14px / 18px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin: 10px 60px;
+    margin-bottom: 0;
     outline: rgb(153, 153, 153) none 0px;
 }/*#P_24*/
 
@@ -383,7 +321,26 @@ body {
     outline: rgb(153, 153, 153) none 0px;
 }/*#A_25, #A_26*/
 
-
+#button_1 {
+	color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 31px;
+    min-height: 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 268px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 134px 15.5px;
+    transform-origin: 134px 15.5px;
+    background: rgba(11, 61, 146,0.8) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(11, 61, 146);
+    border-radius: 3px 3px 3px 3px;
+    font: normal normal 600 normal 14px / 29px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+    padding: 0px 11px;
+    align: center;
+}
 
 /*--------- INPUT PLACEHOLDER TEXT ---------*/
 
