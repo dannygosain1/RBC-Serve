@@ -43,7 +43,7 @@ def get_users():
     return stringify(user_list)
 
 @app.route('/api/check_user')
-def check_job(user_email):
+def check_user(user_email):
     email = request.args.get('email')[1:-1]
     password = request.args.get('password')[1:-1]
 
