@@ -9,4 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sydevelopers.rbc_serve.JobActivity">
 
+    <TextView
+        android:id="@+id/jobs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Jobs"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp" />
+
+    <ListView
+        android:id="@+id/job_list"
+        android:layout_below="@id/jobs_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
