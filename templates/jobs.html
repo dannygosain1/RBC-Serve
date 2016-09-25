@@ -7,27 +7,23 @@
         <script src="../static/js/jobs.js"></script>
         <link rel="stylesheet" type="text/css" href="../static/css/jobs.css">
    	</head>
-    <body background="../images/start_small.png" width = "100%">
-        <table id="TABLE_1">
-    <tbody id="TBODY_2">
-        <tr id="TR_3">
-            <th id="TH_4">
-                <img src="../images/RBC-LOGO-NEW.png" id="IMG_5" alt='' />
-            </th>
-            <th id="TH_6">
-                RBC Serve
-            </th>
-            <th id="TH_7">
-            </th>
+    <body>
+    <div class="topbar">
+      <table border="0" class="tablebar">
+        <tr>
+          <td width="33%">
+          <img src = "http://vignette2.wikia.nocookie.net/logopedia/images/8/88/RBC_Bank_logo.png/revision/latest?cb=20111030202437" width="53px" height="70px"></td>
+          <td class = "titletext" width="33%" align="center"><font color="white" size="5"><b>RBC Serve </b></font></td>
+          <td width="33%"></td>
         </tr>
-    </tbody>
-</table>
+      </table>
+    </div>
 
     <body>
-    	<div class="base">
+    	<div class="base" style="margin:0 auto;">
             <form>
                 <div class="row">
-                    <label>Choose the industry of your service:</label>
+                    <label class = "industry">Choose the industry of your service:</label> <br><br>
                     <select id="servicesearch">
                         <option value="Accounting">Accounting</option>
                         <option value="Babysitting">Babysitting</option>
@@ -40,7 +36,7 @@
                     </select>
                 </div>
                 <div class="row">
-                    <label>Please enter the city you are in:</label>
+                    <label class = "industry">Please enter the city you are in:</label>
                     <input id="locationsearch"></input>
                 </div>
                 <div class="row">
@@ -52,7 +48,9 @@
                     </ul>
                 </div>
             </form>
-		</div>
+
+        </div>
+            
 	</body>
 </html>
 
