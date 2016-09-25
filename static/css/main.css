@@ -3,14 +3,16 @@ body{
 	padding: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #000;
-	background: url(../../images/start_small.png);
+	background: url(../images/start_small.png);
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 }
 .hidden-content {
 	display: none;
 }
-
+.base_main {
+	color: #000 !important;
+}
 h1 {
 	color:#fff;
 }
@@ -29,7 +31,6 @@ header {
 	padding: 0;
 	margin: 0;
 	background-color: #888888;
-	opacity
 }
 .nav-bar li {
 	display: inline-block;

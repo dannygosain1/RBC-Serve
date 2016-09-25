@@ -7,21 +7,14 @@ $(document).ready(function() {
 		$.get(reqstring, function(data, status){
 			var jsonObj = $.parseJSON('['+data+']')
 			if (status == "success") {
-				let joblist = $(".job-list ul");
 				$(".submit-status").innerHTML = "Submitted successfully.";
-				data.forEach(function(job) {
-					let industry = document.createElement("DIV"),
-							serviceText = job.service,
-							description = document.createElement("DIV"),
-							descriptionText = job.description,
-							budget = document.createElement("DIV"),
-							budgetText = job.budget,
-							listitem = document.createElement("LI");
-					industry.appendChild(serviceText);
-					description.appendChild(descriptionText);
-					budget.appendChild(budgetText);
-					listitem.appendChild(industry).appendChild(description).appendChild(budget);
-					joblist.appendChild(listitem);
+				document.getElementById("job-list").innerHTML = "";
+				jsonObj.forEach(function(job) {
+					document.getElementById("job-list").innerHTML += '<li>'+
+						'<div class="industry">'+jsonObj[0].service+'</div>'+
+						'<div class="dscription">'+jsonObj[0].description+'</div'+
+						'<div class="budget">'+jsonObj[0].budget+'</div>'+
+						'</li>';
 				});
 			} else {
 				$(".submit-status").innerHTML = "Submission failed. Please try again";			

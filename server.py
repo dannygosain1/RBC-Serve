@@ -66,13 +66,10 @@ def get_posts_android():
     post_list = list(mongo.db.posts.find({}))
     return JSONEncoder().encode(post_list)
 
-@app.route('/api/search_posts', methods = ['POST'])
+@app.route('/api/search_posts')
 def search_posts():
-    # location = request.args.get('location')[1:-1]
-    # service = request.args.get('service')[1:-1]
-
-    location = request.form['location']
-    service = request.form['service']
+    location = request.args.get('location')[1:-1]
+    service = request.args.get('service')[1:-1]
     records = list(mongo.db.posts.find({'service':service, 'city':location}))
     return stringify(records)
 

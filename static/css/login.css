@@ -2,6 +2,7 @@ body {
 	background-color: #000000;
 	margin:0px;
 	padding:0px;
+    background: url(../../images/start_small.png);
 	background-repeat: no-repeat;
 	width:100%;
     background-attachment: fixed;
@@ -48,6 +49,7 @@ h5 {
     margin: 0px 0px 10px;
     outline: rgb(38, 38, 38) none 0px;
     padding: 10px 0px;
+    font: #000;
 }/*#DIV_1*/
 
 .base_signup {
@@ -668,10 +670,6 @@ h5 {
 }
 
 .titletext {
-    color:#fff;
-}
-
-.industry {
     color:#fff;
 }
 
