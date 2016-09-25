@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    	<title>Main</title>
+      <title>Main</title>
       <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
       <script src="../static/js/main.js"></script>
       <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-   	</head>
+      <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    </head>
   <body>
-  	<header class="top">
-  	</header>
-  	<div class="nav-bar">
-  		<ul>
-  			<li id="client" class="active"><a id="client">Client</a></li>
-  			<li id="provider"><a id="provider">Provider</a></li>
-  		</ul>
-  	</div>
+    <div class="topbar">
+      <table border="0" width="100%" class="tablebar">
+        <tr>
+          <td width="33%">
+          <img src = "../images/RBC-LOGO-NEW.png" width="53px" height="70px"></td>
+          <td class = "titletext" width="33%" align="center"><font color="white" size="5"><b>RBC Serve </b></font></td>
+          <td width="33%"></td>
+        </tr>
+      </table>
+    </div>
 
-  	<div id="client-page" class="container">
-      <div class="row submit-status"></div>
-  		<div class="search-container">
-  			<form>
-  				<div class="row">
-  					<label>Choose the industry of your service:</label>
-  					<select id="servicelist" placeholder=" ">
+    <div class="base_main" style="margin:0 auto;"> <br>
+
+
+      <table border="0" width=100% align="center">
+          <tr>
+            <td height = "600px" style="padding: 0px 0px 0px 30px;">
+              <form>
+          <div class="row">
+            <label class = "industry">Choose the industry of your service:</label> <br>
+            <select class = "option"id="servicelist" placeholder=" ">
               <option value="Accounting">Accounting</option>
               <option value="Babysitting">Babysitting</option>
               <option value="Baking">Baking</option>
@@ -31,59 +37,43 @@
               <option value="IT Services">IT Services</option>
               <option value="Plumbing">Plumbing</option>
               <option value="Tutoring">Tutoring</option>
-            </select>
-  				</div>
-  				<div class="row">
-  					<label class="inline-label">What is your approximate budget?</label>
-  					<label class="inline-label">$</label>
-  					<input id="budget">
-  				</div>
-  				<div class="row">
-  					<label>Please briefly describe the service you are looking for:</label>
-  					<textarea id="description"></textarea>
-  				</div>
-					<div class="row">
-						<label>What city do you live in?</label>
-						<input id="cityaddress"></input>
-					</div>
-  				<div class="row">
-  					<button id="submitpost">Submit</input>
-  				</div>
-  			</form>
-  		</div>
-  	</div>
-  	
-  	<div id="provider-page" class="container hidden-content">
-  		<div class="search-container">
-  			<form>
-  				<div class="row">
-  					<label>Choose the industry of your service:</label>
-  					<select id="servicesearch">
-                <option value="Accounting">Accounting</option>
-                <option value="Babysitting">Babysitting</option>
-                <option value="Baking">Baking</option>
-                <option value="Catering">Catering</option>
-                <option value="Housekeeping">Housekeeping</option>
-                <option value="IT Services">IT Services</option>
-                <option value="Plumbing">Plumbing</option>
-                <option value="Tutoring">Tutoring</option>
-              </select>
-  				</div>
+            </select><br>
+            <label class = "industry">What is your approximate budget?</label><br>
+            <label class = "inline-label">$</label>
+            <div id="inputform">
+            <input type="text" id="budget" name="budget" placeholder="" />
+            </div>
+            <label class = "industry">Please briefly describe the service you are looking for:</label> <br> <br>
+            <textarea id="description"></textarea>
+            <div class="row">
+            <label class = "industry">What city do you live in?</label><br><br>
+            <input id="cityaddress"></input>
+            </div>
           <div class="row">
-            <label>Please enter the city you are in:</label>
-            <input id="citysearch"></input>
+            <button type="button" id="submitpost" style="padding-left:-50px">Submit</button>
           </div>
-          <div class="row">
-            <button id="submitsearch">Submit</input>
           </div>
+          </div>
+        </form>
 
-          <div class="job-list">
-            <ul>
-            </ul>
-          </div>
-  			</form>
-  		</div>
-  	</div>
-	</body>
+          </td>
+
+
+  
+
+
+
+
+      
+    </div>
+
+   <!--  <div id="client-page" class="container">
+      <div class="row submit-status"></div>
+      <div class="search-container"> -->
+        
+      </div>
+    </div>
+    
+  </body>
 
 </html>

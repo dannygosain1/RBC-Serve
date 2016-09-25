@@ -11,6 +11,10 @@ body{
 	display: none;
 }
 
+h1 {
+	color:#fff;
+}
+
 header {
 	height: 60px;
 	background-color: #0060f0;
@@ -62,6 +66,7 @@ label {
 }
 .inline-label{
 	display: inline-block;
+	color:#fff;
 }
 input, textarea, select {
 	margin-left: 10px;
@@ -91,4 +96,72 @@ form button {
 	border-radius: 5px;
 	margin-left: 10px;	
 	line-height: 20px;
+}
+
+#description {
+	background-position: 0px 0px;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 73px;
+    min-height: auto;
+    min-width: auto;
+    width: 400px;
+    column-rule-color: rgb(38, 38, 38);
+    perspective-origin: 134px 16.5px;
+    transform-origin: 134px 16.5px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px 3px 3px 3px;
+    font: normal normal normal normal 14px / normal proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    outline: rgb(38, 38, 38) none 0px;
+    padding: 9px 8px 7px;
+    margin-top: -20px;
+    margin-bottom: 23px;
+}
+
+#cityaddress {
+	background-position: 0px 0px;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 23px;
+    min-height: auto;
+    min-width: auto;
+    width: 400px;
+    column-rule-color: rgb(38, 38, 38);
+    perspective-origin: 134px 16.5px;
+    transform-origin: 134px 16.5px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px 3px 3px 3px;
+    font: normal normal normal normal 14px / normal proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    outline: rgb(38, 38, 38) none 0px;
+    padding: 9px 8px 7px;
+    margin-top: -20px;
+    margin-bottom: 23px;
+}
+
+#submitpost {
+	color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 31px;
+    min-height: 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 268px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 134px 15.5px;
+    transform-origin: 134px 15.5px;
+    background: rgba(11, 61, 146,0.8) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(11, 61, 146);
+    border-radius: 3px 3px 3px 3px;
+    font: normal normal 600 normal 14px / 29px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+    padding: 0px 11px;
+    align: center;
+}
+
+.borderright {
+    border-style: dashed;
+    border-left: thick double #fff;
 }
