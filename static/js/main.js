@@ -37,43 +37,17 @@ $(document).ready(function() {
 		let	formdata = {
 					service : $("#servicelist").val(),
 					budget : $("#budget").val(),
-					description : $("#description").val()					
-				},
-				diffaddress = $("#diffaddress").checked;
-		if(diffaddress) {
-			formdata["diffaddress"] = true;
-			formdata["streetaddress"] = $("#streetaddress").val();
-			formdata["cityaddress"] = $("#cityaddress").val();
-			formdata["provinceaddress"] = $("#provinceaddress").val();
-			formdata["postaladdress"] = $("#postaladdress").val();
-		} else {
-			formdata["diffaddress"] = false;			
-		}
+					description : $("#description").val(),					
+					city : $("#cityaddress").val();	
+				}
 		$.post("/api/create_post", formdata, function(data, status){
 			if (status == "success") {
-				$("#submit-status").innerHTML = "Submitted successfully.";
+				$(".submit-status").innerHTML = "Submitted successfully.";
 			} else {
-				$("#submit-status").innerHTML = "Submission failed. Please try again";			
+				$(".submit-status").innerHTML = "Submission failed. Please try again";			
 			}
 		});
 	});
-
-	submitsearch.click(function() {
-		let formdata = {
-			service : $("#servicesearch").val(),
-			city : $("#citysearch").val()
-		};
-		$.post("/api/create_post", formdata, function(data, status){
-			if (status == "success") {
-				$("#submit-status").innerHTML = "Submitted successfully.";
-				data.forEach(function(job) {
-					var tttt = $(".job-list ul");
-				});
-			} else {
-				$("#submit-status").innerHTML = "Submission failed. Please try again";			
-			}
-		});		
-	})
 });
 
 
