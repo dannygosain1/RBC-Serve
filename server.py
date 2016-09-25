@@ -26,7 +26,7 @@ class JSONEncoder(json.JSONEncoder):
 
 @app.route('/api/create_user', methods = ['POST'])
 def create_user():
-    return JSONEncoder().encode(mongo.db.users.insert(request.json))
+    return JSONEncoder().encode(mongo.db.users.insert(request.form.to_dict()))
 
 @app.route('/api/get_users')
 def get_users():
@@ -35,32 +35,41 @@ def get_users():
 
 @app.route('/api/create_post', methods = ['POST'])
 def create_post():
-    return JSONEncoder().encode(mongo.db.posts.insert(request.json))
+    return JSONEncoder().encode(mongo.db.posts.insert(request.form.to_dict()))
 
 @app.route('/api/get_posts')
 def get_posts():
     post_list = list(mongo.db.posts.find({}))
     return JSONEncoder().encode(post_list)
 
+@app.route('/api/create_job', methods = ['POST'])
+def create_job():
+    return JSONEncoder().encode(mongo.db.jobs.insert(request.form.to_dict()))
+
+@app.route('/api/get_job/<employer_email>')
+def get_job(employer_email):
+    records = list(mongo.db.jobs.find({'employer':employer_email}))
+    return JSONEncoder().encode(records)
+
+@app.route('/api/get_jobs')
+def get_jobs():
+    job_list = list(mongo.db.jobs.find({}))
+    return JSONEncoder().encode(job_list)
+
 @app.route('/')
 def hello_world():
     return render_template("test.html")
 
-@app.route('/api/get_jobs/<userid>')
-def api_history(userid):
-    return simplejson.dumps(output, default=date_handler)
+@app.route('/home')
+def home_page():
+    return render_template("main.html")
 
 @app.route('/api/go', methods = ['POST'])
 def api_go():
     return simplejson.dumps(output_response, default=date_handler)
 
-@app.route('/api/get_jobs')
-def get_jobs():
-    jobs_list = list(mongo.db.jobs.find({}))
-    return JSONEncoder().encode(jobs_list)
-
-@app.route('/Analytics')
-def Analytics():
+@app.route('/analytics')
+def analytics():
     jobs_list = list(mongo.db.jobs.find({'employer':'dan@hotmail.com'}))
     revenue = [x['revenue'] for x in jobs_list]
     dates = [x['date'] for x in jobs_list]

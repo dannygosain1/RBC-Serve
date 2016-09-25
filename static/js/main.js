@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	var clienttab = $("#client"),
-			providertab = $("#provider"),
+		providertab = $("#provider"),
 	    clientpage = $("#client-page"),
 	    providerpage = $("#provider-page"),
 	    diffaddress = $("#diffaddress"),
