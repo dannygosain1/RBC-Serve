@@ -30,7 +30,7 @@
               <option value="Housekeeping">Housekeeping</option>
               <option value="IT Services">IT Services</option>
               <option value="Plumbing">Plumbing</option>
-              <option value="Tutoring">Tutoring</option>,
+              <option value="Tutoring">Tutoring</option>
             </select>
   				</div>
   				<div class="row">
@@ -77,10 +77,28 @@
   			<form>
   				<div class="row">
   					<label>Choose the industry of your service:</label>
-  					<select id="service"></select>
+  					<select id="servicesearch">
+                <option value="Accounting">Accounting</option>
+                <option value="Babysitting">Babysitting</option>
+                <option value="Baking">Baking</option>
+                <option value="Catering">Catering</option>
+                <option value="Housekeeping">Housekeeping</option>
+                <option value="IT Services">IT Services</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Tutoring">Tutoring</option>
+              </select>
   				</div>
           <div class="row">
+            <label>Please enter the city you are in:</label>
+            <input id="citysearch"></input>
+          </div>
+          <div class="row">
             <button id="submitsearch">Submit</input>
+          </div>
+
+          <div class="job-list">
+            <ul>
+            </ul>
           </div>
   			</form>
   		</div>
