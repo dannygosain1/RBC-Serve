@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b034a79c-77cf-45d0-be48-c6ee73541f93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/.idea/misc.xml" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/build.gradle" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/java/com/example/sydevelopers/rbc_serve/JobActivity.java" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/java/com/example/sydevelopers/rbc_serve/JobActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/java/com/example/sydevelopers/rbc_serve/LoginActivity.java" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/java/com/example/sydevelopers/rbc_serve/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/res/layout/activity_job.xml" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/res/layout/activity_job.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/res/layout/list_v.xml" afterPath="$PROJECT_DIR$/Mobile/RBC-Serve/app/src/main/res/layout/list_v.xml" />
     </list>
     <ignored path="RBC-Serve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="614">
+              <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -435,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="26" />
+        <state relative-caret-position="614">
+          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
