@@ -25,6 +25,7 @@ ul {
 	padding: 0;
 	margin: 0;
 	background-color: #888888;
+	opacity
 }
 .nav-bar li {
 	display: inline-block;
@@ -34,10 +35,12 @@ ul {
 	line-height: 40px;
 	font-size: 2.0em;
 	color: #FEDF01;	
+	opacity:0.5;
 }
 .nav-bar .active {
 	color: #002888; 
 	background-color: #fff;
+	opacity:1;
 }
 
 .container {
