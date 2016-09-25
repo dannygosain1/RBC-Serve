@@ -15,6 +15,13 @@ h2 {
 	margin-top:0;
 }
 
+h5 {
+    text-align: center;
+    color:#fff;
+    padding:0;
+    margin-top:0;
+}
+
 
 .base {
     bottom: 0px;
@@ -48,13 +55,13 @@ h2 {
     box-sizing: border-box;
     color: rgb(38, 38, 38);
     display: flex;
-    height: 650px;
+    height: 700px;
     left: 0px;
     min-height: auto;
     min-width: auto;
     position: relative;
     right: 0px;
-    top: 100px;
+    top: 50px;
     width: 350px;
     /*column-rule-color: rgb(38, 38, 38);*/
     perspective-origin: 175px 261.5px;
@@ -265,6 +272,30 @@ h2 {
     flex-flow: column nowrap;
     font: normal normal normal normal 16px / 16px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin: 0px 20px 6px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_13, #DIV_15, #DIV_17, #DIV_19*/
+
+#inputformopt {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: flex;
+    height: 23px;
+    left: 0px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 268px;
+    column-rule-color: rgb(38, 38, 38);
+    perspective-origin: 134px 16.5px;
+    transform-origin: 134px 16.5px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    font: normal normal normal normal 16px / 16px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: -10px 10px 10px 20px;
     outline: rgb(255, 255, 255) none 0px;
 }/*#DIV_13, #DIV_15, #DIV_17, #DIV_19*/
 
