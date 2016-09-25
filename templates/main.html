@@ -7,27 +7,23 @@
       <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     </head>
   <body>
-    <div class="topbar">
+   <div class="topbar">
       <table border="0" class="tablebar">
         <tr>
           <td width="33%">
-          <img src = "../images/RBC-LOGO-NEW.png" width="53px" height="70px"></td>
+          <img src = "http://vignette2.wikia.nocookie.net/logopedia/images/8/88/RBC_Bank_logo.png/revision/latest?cb=20111030202437" width="53px" height="70px"></td>
           <td class = "titletext" width="33%" align="center"><font color="white" size="5"><b>RBC Serve </b></font></td>
           <td width="33%"></td>
         </tr>
       </table>
     </div>
 
-    <div class="base_main" style="margin:0 auto;"> <br>
-
-      <table border="0" width=100% align="center">
-          <tr>
-            <td height = "600px" style="padding: 0px 0px 0px 30px;">
-            <h1>SUBMIT A REQUEST</h1>
-              <form>
-          <div class="row">
+    <div class="base" style="margin:0 auto;"> <br>
+      <h2>SUBMIT A REQUEST</h2>
+      <form>
+        <div class="row">
             <label class = "industry">Choose the industry of your service:</label> <br>
-            <select class = "option"id="servicelist" placeholder=" ">
+            <select class = "option" id="servicelist" placeholder=" ">
               <option value="Accounting">Accounting</option>
               <option value="Babysitting">Babysitting</option>
               <option value="Baking">Baking</option>
@@ -37,17 +33,25 @@
               <option value="Plumbing">Plumbing</option>
               <option value="Tutoring">Tutoring</option>
             </select><br>
-            <label class = "industry">What is your approximate budget?</label><br>
-            <label class = "inline-label">$</label>
-            <div id="inputform">
-            <input type="text" id="budget" name="budget" placeholder="" />
-            </div>
-            <label class = "industry">Please briefly describe the service you are looking for:</label> <br> <br>
-            <textarea id="description"></textarea>
+
             <div class="row">
-            <label class = "industry">What city do you live in?</label><br><br>
+            <label class = "industry">What is your approximate budget?</label>
+            <br>
+            <div class="industry">
+            <input type="text" id="budget" name="budget" placeholder="" /></input>
+            </div> <br>
+            <label class = "industry">Please briefly describe the service you are looking for:</label> <br> 
+            <div class="industry">
+            <input type="text" id="description" name="budget" placeholder="" /></input>
+            </div>
+            <div class="row"><br>
+            <label class = "industry">What city do you live in?</label><br>
+            <div class="industry">
             <input id="cityaddress"></input>
             </div>
+            
+            </div>
+            <br>
           <div class="row" align="center">
             <button type="button" id="submitpost">Submit</button>
           </div>
