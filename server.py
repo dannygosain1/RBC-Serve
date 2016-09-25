@@ -3,6 +3,9 @@ from datetime import date, datetime
 from message import text
 from flask import Flask
 from flask_pymongo import PyMongo
+import simplejson
+import json
+from bson import ObjectId
 
 # Create Flask App
 app = Flask(__name__)
@@ -14,21 +17,29 @@ app.config['MONGO_URI'] = 'mongodb://syde:syde@ds053828.mlab.com:53828/rbc-serve
 # Get Collections
 mongo = PyMongo(app)
 
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
 @app.route('/api/create_user', methods = ['POST'])
 def create_user():
-    mongo.db.users.insert(request.json)
+    return JSONEncoder().encode(mongo.db.users.insert(request.json))
 
 @app.route('/api/get_users')
 def get_users():
-    return mongo.db.users.find({})
+    user_list = list(mongo.db.users.find({}))
+    return JSONEncoder().encode(user_list)
 
 @app.route('/api/create_post', methods = ['POST'])
 def create_post():
-    mongo.db.posts.insert(request.json)
+    return JSONEncoder().encode(mongo.db.posts.insert(request.json))
 
 @app.route('/api/get_posts')
 def get_posts():
-    return mongo.db.posts.find({})
+    post_list = list(mongo.db.posts.find({}))
+    return JSONEncoder().encode(post_list)
 
 @app.route('/')
 def hello_world():
