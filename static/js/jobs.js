@@ -27,7 +27,7 @@ $(document).ready(function() {
 					document.getElementById("job-list").innerHTML += '<li>'+
 						'<div class="industry">'+jsonObj[0].service+'</div>'+
 						'<div class="dscription">'+jsonObj[0].description+'</div'+
-						'<div class="budget">'+jsonObj[0].budget+'</div>'+
+						'<button type="button" class="message">Message</div>'+
 						'</li>';
 				});
 			} else {
