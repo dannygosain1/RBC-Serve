@@ -44,9 +44,9 @@ def get_posts():
 
 @app.route('/api/search_posts')
 def search_posts():
-    location = request.args.get('location')
-    service = request.args.get('service')
-    records = list(mongo.db.posts.find({}))
+    location = request.args.get('location')[1:-1]
+    service = request.args.get('service')[1:-1]
+    records = list(mongo.db.posts.find({'service':service, 'city':location}))
     return JSONEncoder().encode(records)
 
 @app.route('/api/create_job', methods = ['POST'])

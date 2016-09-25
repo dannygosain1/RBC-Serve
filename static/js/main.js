@@ -38,7 +38,7 @@ $(document).ready(function() {
 					service : $("#servicelist").val(),
 					budget : $("#budget").val(),
 					description : $("#description").val(),					
-					city : $("#cityaddress").val();	
+					city : $("#cityaddress").val()
 				}
 		$.post("/api/create_post", formdata, function(data, status){
 			if (status == "success") {
