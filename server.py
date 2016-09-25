@@ -7,6 +7,8 @@ import simplejson
 import json
 from bson import ObjectId
 from bson import json_util
+from bson.json_util import dumps
+import ast
 
 # Create Flask App
 app = Flask(__name__)
@@ -17,6 +19,13 @@ app.config['MONGO_URI'] = 'mongodb://syde:syde@ds053828.mlab.com:53828/rbc-serve
 
 # Get Collections
 mongo = PyMongo(app)
+
+def jsonthis(_list):
+    post_list2 = []
+    for pstdict in _list:
+        pstdict.pop('_id', None)
+        post_list2.append(pstdict)
+    return json.dumps("{"+json.dumps(post_list2)[1:-1]+"}")
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
@@ -40,14 +49,14 @@ def create_post():
 @app.route('/api/get_posts')
 def get_posts():
     post_list = list(mongo.db.posts.find({}))
-    return post_list
+    return jsonthis(post_list)
 
 @app.route('/api/search_posts')
 def search_posts():
     location = request.args.get('location')[1:-1]
     service = request.args.get('service')[1:-1]
     records = list(mongo.db.posts.find({'service':service, 'city':location}))
-    return records
+    return jsonthis(records)
 
 @app.route('/api/create_job', methods = ['POST'])
 def create_job():
