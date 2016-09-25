@@ -5,6 +5,7 @@ $(document).ready(function() {
 				location = $("#locationsearch").val(),
 				reqstring = '/api/search_posts?location="'+location+'"&service="'+service+'"';
 		$.get(reqstring, function(data, status){
+			var jsonObj = $.parseJSON('['+data+']')
 			if (status == "success") {
 				let joblist = $(".job-list ul");
 				$(".submit-status").innerHTML = "Submitted successfully.";

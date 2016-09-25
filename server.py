@@ -20,13 +20,6 @@ app.config['MONGO_URI'] = 'mongodb://syde:syde@ds053828.mlab.com:53828/rbc-serve
 # Get Collections
 mongo = PyMongo(app)
 
-def jsonthis(_list):
-    post_list2 = []
-    for pstdict in _list:
-        pstdict.pop('_id', None)
-        post_list2.append(pstdict)
-    return json.dumps("{"+json.dumps(post_list2)[1:-1]+"}")
-
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, ObjectId):
@@ -49,14 +42,30 @@ def create_post():
 @app.route('/api/get_posts')
 def get_posts():
     post_list = list(mongo.db.posts.find({}))
-    return jsonthis(post_list)
+    post_list2 = []
+    for pstdict in post_list:
+        pstdict.pop('_id', None)
+        post_list2.append(pstdict)
+
+    print "hellooooo"
+    x = json.loads(json.dumps("{"+json.dumps(post_list2)[1:-1]+"}"))
+    print x
+    return json.loads(json.dumps("{"+json.dumps(post_list2)[1:-1]+"}"))
 
 @app.route('/api/search_posts')
 def search_posts():
     location = request.args.get('location')[1:-1]
     service = request.args.get('service')[1:-1]
     records = list(mongo.db.posts.find({'service':service, 'city':location}))
-    return jsonthis(records)
+    post_list2 = []
+    for pstdict in records:
+        pstdict.pop('_id', None)
+        post_list2.append(pstdict)
+
+    print "hellooooo"
+    x = json.dumps(post_list2)[1:-1]
+    print x
+    return x
 
 @app.route('/api/create_job', methods = ['POST'])
 def create_job():
