@@ -115,6 +115,7 @@ h2 {
     font: normal normal normal normal 16px / 16px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin: 0px 0px 20px;
     outline: rgb(38, 38, 38) none 0px;
+    align: center;
 }/*#DIV_3*/
 
 #FORM_1 {
@@ -263,7 +264,7 @@ h2 {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     font: normal normal normal normal 16px / 16px proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin: 0px 40px 6px;
+    margin: 0px 20px 6px;
     outline: rgb(255, 255, 255) none 0px;
 }/*#DIV_13, #DIV_15, #DIV_17, #DIV_19*/
 
