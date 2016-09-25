@@ -40,14 +40,14 @@ def create_post():
 @app.route('/api/get_posts')
 def get_posts():
     post_list = list(mongo.db.posts.find({}))
-    return JSONEncoder().encode(post_list)
+    return post_list
 
 @app.route('/api/search_posts')
 def search_posts():
     location = request.args.get('location')[1:-1]
     service = request.args.get('service')[1:-1]
     records = list(mongo.db.posts.find({'service':service, 'city':location}))
-    return JSONEncoder().encode(records)
+    return records
 
 @app.route('/api/create_job', methods = ['POST'])
 def create_job():
@@ -61,7 +61,7 @@ def get_job(employer_email):
 @app.route('/api/get_jobs')
 def get_jobs():
     job_list = list(mongo.db.jobs.find({}))
-    return JSONEncoder().encode(job_list)
+    return job_list
 
 @app.route('/')
 def hello_world():
