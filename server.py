@@ -42,6 +42,13 @@ def get_posts():
     post_list = list(mongo.db.posts.find({}))
     return JSONEncoder().encode(post_list)
 
+@app.route('/api/search_posts')
+def search_posts():
+    location = request.args.get('location')
+    service = request.args.get('service')
+    records = list(mongo.db.posts.find({}))
+    return JSONEncoder().encode(records)
+
 @app.route('/api/create_job', methods = ['POST'])
 def create_job():
     return JSONEncoder().encode(mongo.db.jobs.insert(request.form.to_dict()))
@@ -63,6 +70,10 @@ def hello_world():
 @app.route('/home')
 def home_page():
     return render_template("main.html")
+
+@app.route('/jobs')
+def jobs_page():
+    return render_template("jobs.html")
 
 @app.route('/api/go', methods = ['POST'])
 def api_go():
