@@ -2,7 +2,7 @@ body {
 	background-color: #000000;
 	margin:0px;
 	padding:0px;
-    background: url(../../images/start_small.png);
+    background: url(../images/start_small.png);
 	background-repeat: no-repeat;
 	width:100%;
     background-attachment: fixed;
@@ -161,7 +161,7 @@ h5 {
 }/*#DIV_1*/
 
 #logo1 {
-
+    height: 150px;
 }
 
 #logo {
