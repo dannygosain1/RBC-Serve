@@ -52,7 +52,7 @@ public class JobActivity extends AppCompatActivity {
         setContentView(R.layout.activity_job);
         mJobPosts = new ArrayList<JobPosts>();
         lv = (ListView) findViewById(R.id.job_list);
-        String url = "http://5cacf9ed.ngrok.io/api/get_posts";
+        String url = "http://5cacf9ed.ngrok.io/api/get_posts_android";
         getJSArr(url);
     }
 
@@ -95,7 +95,7 @@ public class JobActivity extends AppCompatActivity {
     }
 
     private void populateUI(){
-        mJobPostsAdapter= new JobPostsAdapter (JobActivity.this, 1, mJobPosts);
+        mJobPostsAdapter= new JobPostsAdapter (JobActivity.this, mJobPosts);
         lv.setAdapter(mJobPostsAdapter);
     }
 }
