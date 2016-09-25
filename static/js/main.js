@@ -6,7 +6,7 @@ $(document).ready(function() {
 	    providerpage = $("#provider-page"),
 	    diffaddress = $("#diffaddress"),
 	    submitpost = $("#submitpost"),
-	    submitsearch = $("submitsearch");
+	    submitsearch = $("#submitsearch");
 
 	clienttab.click(function() {
 		if(clientpage.hasClass("hidden-content")) {
@@ -57,6 +57,23 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	submitsearch.click(function() {
+		let formdata = {
+			service : $("#servicesearch").val(),
+			city : $("#citysearch").val()
+		};
+		$.post("/api/create_post", formdata, function(data, status){
+			if (status == "success") {
+				$("#submit-status").innerHTML = "Submitted successfully.";
+				data.forEach(function(job) {
+					var tttt = $(".job-list ul");
+				});
+			} else {
+				$("#submit-status").innerHTML = "Submission failed. Please try again";			
+			}
+		});		
+	})
 });
 
 
