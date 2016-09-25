@@ -1,5 +1,6 @@
-$(document).ready(function() {
+$(function() {
 
+<<<<<<< HEAD
 	var clienttab = $("#client"),
 			providertab = $("#provider"),
 	    clientpage = $("#client-page"),
@@ -59,5 +60,3 @@ $(document).ready(function() {
 		})
 	})
 });
-
-
