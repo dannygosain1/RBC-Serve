@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 import simplejson
 import json
 from bson import ObjectId
+from bson import json_util
 
 # Create Flask App
 app = Flask(__name__)
@@ -43,15 +44,35 @@ def get_posts():
 
 @app.route('/')
 def hello_world():
-    return render_template("index.html")
+    return render_template("test.html")
 
-@app.route('/api/history/<userid>')
+@app.route('/api/get_jobs/<userid>')
 def api_history(userid):
     return simplejson.dumps(output, default=date_handler)
 
 @app.route('/api/go', methods = ['POST'])
 def api_go():
     return simplejson.dumps(output_response, default=date_handler)
+
+@app.route('/api/get_jobs')
+def get_jobs():
+    jobs_list = list(mongo.db.jobs.find({}))
+    return JSONEncoder().encode(jobs_list)
+
+@app.route('/Analytics')
+def Analytics():
+    jobs_list = list(mongo.db.jobs.find({'employer':'dan@hotmail.com'}))
+    revenue = [x['revenue'] for x in jobs_list]
+    dates = [x['date'] for x in jobs_list]
+    print revenue
+    print dates
+    chart = {"type": 'line',"zoomType": 'xy'}
+    series = [{"name": 'Revenue', "data": revenue}]
+    title = {"text": 'Historic Revenue'}
+    xAxis = {"categories": dates}
+    yAxis = {"title": {"text": 'Revenue (CAD)'}}
+    obj = {'chart':chart,'series':series,'title':title,'xAxis':xAxis,'yAxis':yAxis}
+    return json.dumps(obj)
 
 if __name__ == '__main__':
     app.run(debug=True)

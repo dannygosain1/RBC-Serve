@@ -12,24 +12,34 @@
   	<div class="nav-bar">
   		<ul>
   			<li id="client" class="active"><a id="client">Client</a></li>
-  			<li id="provider" class="inactive"><a id="provider">Provider</a></li>
+  			<li id="provider"><a id="provider">Provider</a></li>
   		</ul>
   	</div>
 
-  	<div class="client-page container">
+  	<div id="client-page" class="container">
+      <div class="row submit-status"></div>
   		<div class="search-container">
   			<form>
   				<div class="row">
   					<label>Choose the industry of your service:</label>
-  					<select id="service"></select>
+  					<select id="servicelist" placeholder=" ">
+              <option value="Accounting">Accounting</option>
+              <option value="Babysitting">Babysitting</option>
+              <option value="Baking">Baking</option>
+              <option value="Catering">Catering</option>
+              <option value="Housekeeping">Housekeeping</option>
+              <option value="IT Services">IT Services</option>
+              <option value="Plumbing">Plumbing</option>
+              <option value="Tutoring">Tutoring</option>,
+            </select>
   				</div>
   				<div class="row">
   					<label class="inline-label">What is your approximate budget?</label>
   					<label class="inline-label">$</label>
-  					<input id="moneyoffered">
+  					<input id="budget">
   				</div>
   				<div class="row">
-  					<label>Briefly describe your task</label>
+  					<label>Please briefly describe the service you are looking for:</label>
   					<textarea id="description"></textarea>
   				</div>
   				<div class="row">
@@ -62,13 +72,16 @@
   		</div>
   	</div>
   	
-  	<div class="provider-page container hidden-content">
+  	<div id="provider-page" class="container hidden-content">
   		<div class="search-container">
   			<form>
   				<div class="row">
   					<label>Choose the industry of your service:</label>
   					<select id="service"></select>
   				</div>
+          <div class="row">
+            <button id="submitsearch">Submit</input>
+          </div>
   			</form>
   		</div>
   	</div>
