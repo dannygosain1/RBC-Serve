@@ -68,8 +68,11 @@ def get_posts_android():
 
 @app.route('/api/search_posts', methods = ['POST'])
 def search_posts():
-    location = request.args.get('location')[1:-1]
-    service = request.args.get('service')[1:-1]
+    # location = request.args.get('location')[1:-1]
+    # service = request.args.get('service')[1:-1]
+
+    location = request.form['location']
+    service = request.form['service']
     records = list(mongo.db.posts.find({'service':service, 'city':location}))
     return stringify(records)
 
