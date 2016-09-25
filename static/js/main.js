@@ -37,18 +37,9 @@ $(document).ready(function() {
 		let	formdata = {
 					service : $("#servicelist").val(),
 					budget : $("#budget").val(),
-					description : $("#description").val()					
-				},
-				diffaddress = $("#diffaddress").checked;
-		if(diffaddress) {
-			formdata["diffaddress"] = true;
-			formdata["streetaddress"] = $("#streetaddress").val();
-			formdata["cityaddress"] = $("#cityaddress").val();
-			formdata["provinceaddress"] = $("#provinceaddress").val();
-			formdata["postaladdress"] = $("#postaladdress").val();
-		} else {
-			formdata["diffaddress"] = false;			
-		}
+					description : $("#description").val(),					
+					city : $("#cityaddress").val();	
+				}
 		$.post("/api/create_post", formdata, function(data, status){
 			if (status == "success") {
 				$(".submit-status").innerHTML = "Submitted successfully.";
