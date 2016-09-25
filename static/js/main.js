@@ -51,29 +51,12 @@ $(document).ready(function() {
 		}
 		$.post("/api/create_post", formdata, function(data, status){
 			if (status == "success") {
-				$("#submit-status").innerHTML = "Submitted successfully.";
+				$(".submit-status").innerHTML = "Submitted successfully.";
 			} else {
-				$("#submit-status").innerHTML = "Submission failed. Please try again";			
+				$(".submit-status").innerHTML = "Submission failed. Please try again";			
 			}
 		});
 	});
-
-	submitsearch.click(function() {
-		let formdata = {
-			service : $("#servicesearch").val(),
-			city : $("#citysearch").val()
-		};
-		$.post("/api/create_post", formdata, function(data, status){
-			if (status == "success") {
-				$("#submit-status").innerHTML = "Submitted successfully.";
-				data.forEach(function(job) {
-					var tttt = $(".job-list ul");
-				});
-			} else {
-				$("#submit-status").innerHTML = "Submission failed. Please try again";			
-			}
-		});		
-	})
 });
 
 
