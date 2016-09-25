@@ -49,8 +49,14 @@ $(document).ready(function() {
 		} else {
 			formdata["diffaddress"] = false;			
 		}
-		
-		$.post("/api/create_post", formdata, function(){
+		$.post("/api/create_post", formdata, function(data, status){
+			if (status == "success") {
+				$("#submit-status").innerHTML = "Submitted successfully.";
+			} else {
+				$("#submit-status").innerHTML = "Submission failed. Please try again";			
+			}
 		});
 	});
 });
+
+
