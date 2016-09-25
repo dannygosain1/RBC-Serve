@@ -1,8 +1,7 @@
-$(function() {
+$(document).ready(function() {
 
-<<<<<<< HEAD
 	var clienttab = $("#client"),
-			providertab = $("#provider"),
+		providertab = $("#provider"),
 	    clientpage = $("#client-page"),
 	    providerpage = $("#provider-page"),
 	    diffaddress = $("#diffaddress"),
@@ -40,7 +39,7 @@ $(function() {
 					budget : $("#budget").val(),
 					description : $("#description").val()					
 				},
-				diffaddress = $("#diffaddress").val();
+				diffaddress = $("#diffaddress").checked;
 		if(diffaddress) {
 			formdata["diffaddress"] = true;
 			formdata["streetaddress"] = $("#streetaddress").val();
@@ -51,12 +50,7 @@ $(function() {
 			formdata["diffaddress"] = false;			
 		}
 		
-		$.post("/api/create_post", formdata, function(data, status){
-			if (status == "success") {
-				$("#submit-status").innerHTML = "Submitted successfully.";
-			} else {
-				$("#submit-status").innerHTML = "Submission failed. Please try again";			
-			}
-		})
-	})
+		$.post("/api/create_post", formdata, function(){
+		});
+	});
 });
